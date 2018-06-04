@@ -44,19 +44,31 @@ auth("your_login", "your_api_key")
 ``` r
 library(tinycc)
 
-# shorten https://ropensci.org/blog/2018/05/10/onboarding-social-weather/ to http:/tiny.cc/ros002
+hash <- paste0(sample(c(LETTERS, letters, 0:9), 6, TRUE), collapse = "")
+hash
+#> [1] "p8zKTd"
 
-shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/", shortURL = "ros002")
+# shorten https://ropensci.org/blog/2018/05/10/onboarding-social-weather/
+
+shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/", shortURL = hash)
 #> No encoding supplied: defaulting to UTF-8.
 #> $errorCode
-#> [1] 1215
+#> [1] "0"
 #> 
 #> $errorMessage
-#> [1] "Short URL is not correct or existed."
-#> 
-#> $results
 #> [1] ""
 #> 
+#> $results
+#> $results$short_url
+#> [1] "http://tiny.cc/p8zKTd"
+#> 
+#> $results$userHash
+#> [1] "p8zKTd"
+#> 
+#> $results$hash
+#> [1] "p8zKTd"
+#> 
+#> 
 #> $statusCode
-#> [1] "ERROR"
+#> [1] "OK"
 ```
