@@ -14,14 +14,14 @@ What is ...
 
 -   `shorten()`
 -   `expand()`
+-   `expand_batch()`
 -   `delete()`
 -   `total_visits()`
+-   `total_visits_batch()`
 -   `get_requests_count()`
 
 ### ... to do
 
--   `expand_batch()`
--   `total_visits_batch()`
 -   `edit()`
 
 Example
@@ -47,22 +47,14 @@ library(tinycc)
 shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/", shortURL = "ros002")
 #> No encoding supplied: defaulting to UTF-8.
 #> $errorCode
-#> [1] "0"
+#> [1] 1215
 #> 
 #> $errorMessage
-#> [1] ""
+#> [1] "Short URL is not correct or existed."
 #> 
 #> $results
-#> $results$short_url
-#> [1] "http://tiny.cc/ros002"
-#> 
-#> $results$userHash
-#> [1] "ros002"
-#> 
-#> $results$hash
-#> [1] "ros002"
-#> 
+#> [1] ""
 #> 
 #> $statusCode
-#> [1] "OK"
+#> [1] "ERROR"
 ```
