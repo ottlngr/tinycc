@@ -3,7 +3,7 @@
 tinycc
 ======
 
-[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc)
+[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ottlngr/tinycc?branch=master&svg=true)](https://ci.appveyor.com/project/ottlngr/tinycc)
 
 The goal of tinycc is to ... use the `tinycc` API.
 
@@ -46,7 +46,7 @@ library(tinycc)
 
 hash <- paste0(sample(c(LETTERS, letters, 0:9), 6, TRUE), collapse = "")
 hash
-#> [1] "p8zKTd"
+#> [1] "gM8km7"
 
 # shorten https://ropensci.org/blog/2018/05/10/onboarding-social-weather/
 
@@ -60,13 +60,13 @@ shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weathe
 #> 
 #> $results
 #> $results$short_url
-#> [1] "http://tiny.cc/p8zKTd"
+#> [1] "http://tiny.cc/gM8km7"
 #> 
 #> $results$userHash
-#> [1] "p8zKTd"
+#> [1] "gM8km7"
 #> 
 #> $results$hash
-#> [1] "p8zKTd"
+#> [1] "gM8km7"
 #> 
 #> 
 #> $statusCode

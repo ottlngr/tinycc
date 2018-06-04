@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 
 # tinycc
 
-[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc)
+[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ottlngr/tinycc?branch=master&svg=true)](https://ci.appveyor.com/project/ottlngr/tinycc)
 
 The goal of tinycc is to ... use the `tinycc` API.
 
