@@ -3,6 +3,8 @@
 tinycc
 ======
 
+[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc)
+
 The goal of tinycc is to ... use the `tinycc` API.
 
 <https://tiny.cc/api-docs>
