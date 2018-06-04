@@ -1,3 +1,5 @@
+#' Get requests count for a tiny.cc short URL
+#'
 #' @export get_requests_count
 #' @importFrom httr modify_url
 #' @importFrom httr GET

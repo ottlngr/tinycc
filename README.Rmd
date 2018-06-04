@@ -24,14 +24,14 @@ https://tiny.cc/api-docs
 
 * `shorten()`
 * `expand()`
+* `expand_batch()`
 * `delete()`
 * `total_visits()`
+* `total_visits_batch()` 
 * `get_requests_count()`
 
 ### ... to do
 
-* `expand_batch()`
-* `total_visits_batch()`
 * `edit()`
 
 ## Example

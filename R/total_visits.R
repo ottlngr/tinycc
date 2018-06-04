@@ -1,3 +1,5 @@
+#' Get total visits for a tiny.cc short URL
+#'
 #' @export total_visits
 #' @importFrom httr modify_url
 #' @importFrom httr GET

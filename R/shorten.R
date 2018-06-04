@@ -1,9 +1,12 @@
+#' Shorten an URL to a tiny.cc short URL
+#'
 #' @export shorten
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
+#' @importFrom utils URLencode
 
 shorten <- function(longURL, shortURL = NULL) {
 

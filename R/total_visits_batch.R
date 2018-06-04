@@ -1,25 +1,26 @@
-#' Delete a tiny.cc short URL
+#' Get total visits for tiny.cc short URLs
 #'
-#' @export delete
+#' @export total_visits_batch
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
 
-delete <- function(shortURL) {
+total_visits_batch <- function(shortURLs) {
 
   request <- httr::modify_url(url = "http://tiny.cc/",
                               query = list(
                                 "c" = "rest_api",
-                                "m" = "delete",
+                                "m" = "total_visits_batch",
                                 "version" = "2.0.3",
                                 "format" = "json",
-                                "hash" = gsub("http://tiny.cc/", "", shortURL),
                                 "login" = Sys.getenv("TINYCC_LOGIN"),
                                 "apiKey" = Sys.getenv("TINYCC_API_KEY")
                               )
   )
+
+  request <- paste(request, paste("&", paste0(paste("shortUrls[]=", shortURLs, sep = ""), collapse = "&"), sep = ""), sep = "")
 
   result <- httr::GET(request)
 

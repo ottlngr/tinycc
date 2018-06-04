@@ -1,3 +1,5 @@
+#' Get the long URL from a tiny.cc short URL
+#'
 #' @export expand
 #' @importFrom httr modify_url
 #' @importFrom httr GET
