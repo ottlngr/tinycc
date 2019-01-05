@@ -1,11 +1,18 @@
-#' Get long URLs from tiny.cc short URLs
-#'
-#' @export expand_batch
+#' @title Accepts multiple tiny.cc short urls and returns the long urls
+#' @description Accepts array of tiny.cc short urls and returns the array of pairs of long url and short url.
+#' @details Maximum number of results requested in each call - 30.
+#' @param shortURLs vector, the vector of short urls to expand.
+#' @return A list, representing the response from the tiny.cc API.
+#' @author Philipp Ottolinger
+#' @seealso \code{<https://tiny.cc/api-docs>}
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
+#' @examples
+#'
+#' @export
 
 expand_batch <- function(shortURLs) {
 

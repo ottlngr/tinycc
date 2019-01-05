@@ -1,11 +1,17 @@
-#' Get requests count for a tiny.cc short URL
-#'
-#' @export get_requests_count
+#' @title Retrieve your account's remaining request limit - for the day
+#' @description tbd.
+#' @details tbd.
+#' @return A list, representing the response from the tiny.cc API.
+#' @author Philipp Ottolinger
+#' @seealso \code{<https://tiny.cc/api-docs>}
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
+#' @examples
+#'
+#' @export
 
 get_requests_count <- function() {
 

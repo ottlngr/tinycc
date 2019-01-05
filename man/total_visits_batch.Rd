@@ -2,10 +2,28 @@
 % Please edit documentation in R/total_visits_batch.R
 \name{total_visits_batch}
 \alias{total_visits_batch}
-\title{Get total visits for tiny.cc short URLs}
+\title{Accepts multiple tiny.cc short urls and returns their total visits}
 \usage{
 total_visits_batch(shortURLs)
 }
+\arguments{
+\item{shortURLs}{vector, the vector of short urls to get visits for.}
+}
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Get total visits for tiny.cc short URLs
+Accepts array of tiny.cc short urls and returns the total visits for each short url.
+}
+\details{
+Maximum number of results requested in each call - 30.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }

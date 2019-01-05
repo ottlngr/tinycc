@@ -2,10 +2,28 @@
 % Please edit documentation in R/total_visits.R
 \name{total_visits}
 \alias{total_visits}
-\title{Get total visits for a tiny.cc short URL}
+\title{Accepts a tiny.cc short url and returns the total visits}
 \usage{
 total_visits(shortURL)
 }
+\arguments{
+\item{shortURL}{character, the short url to get visit totals.}
+}
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Get total visits for a tiny.cc short URL
+tbd.
+}
+\details{
+tbd.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }

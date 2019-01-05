@@ -2,10 +2,30 @@
 % Please edit documentation in R/shorten.R
 \name{shorten}
 \alias{shorten}
-\title{Shorten an URL to a tiny.cc short URL}
+\title{Accepts a long url and returns a tiny.cc short url}
 \usage{
 shorten(longURL, shortURL = NULL)
 }
+\arguments{
+\item{longURL}{character, the URL to be shortened}
+
+\item{shortURL}{character, the desired short URL. If NULL, tiny.cc will create a hash. Default: NULL.}
+}
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Shorten an URL to a tiny.cc short URL
+Use this function to shorten an arbitrary URL to a tiny.cc short URL. The received short URL will be of the kind \code{http://tiny.cc/[YOUR_HASH]}.
+}
+\details{
+\code{\link{auth}} must be used preliminary to store your tiny.cc credentials.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }

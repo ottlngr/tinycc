@@ -1,11 +1,18 @@
-#' Get the long URL from a tiny.cc short URL
-#'
-#' @export expand
+#' @title Accepts a tiny.cc short url and returns the long url
+#' @description tbd.
+#' @details tbd.
+#' @param shortURL character, the tiny.cc short URL to expand.
+#' @return A list, representing the response from the tiny.cc API.
+#' @author Philipp Ottolinger
+#' @seealso \code{<https://tiny.cc/api-docs>}
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
+#' @examples
+#'
+#' @export
 
 expand <- function(shortURL) {
 

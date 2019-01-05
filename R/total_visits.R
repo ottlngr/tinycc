@@ -1,11 +1,18 @@
-#' Get total visits for a tiny.cc short URL
-#'
-#' @export total_visits
+#' @title Accepts a tiny.cc short url and returns the total visits
+#' @description tbd.
+#' @details tbd.
+#' @param shortURL character, the short url to get visit totals.
+#' @return A list, representing the response from the tiny.cc API.
+#' @author Philipp Ottolinger
+#' @seealso \code{<https://tiny.cc/api-docs>}
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
+#' @examples
+#'
+#' @export
 
 total_visits <- function(shortURL) {
 

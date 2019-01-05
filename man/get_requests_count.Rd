@@ -2,10 +2,25 @@
 % Please edit documentation in R/get_requests_count.R
 \name{get_requests_count}
 \alias{get_requests_count}
-\title{Get requests count for a tiny.cc short URL}
+\title{Retrieve your account's remaining request limit - for the day}
 \usage{
 get_requests_count()
 }
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Get requests count for a tiny.cc short URL
+tbd.
+}
+\details{
+tbd.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }

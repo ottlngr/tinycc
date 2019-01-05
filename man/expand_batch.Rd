@@ -2,10 +2,28 @@
 % Please edit documentation in R/expand_batch.R
 \name{expand_batch}
 \alias{expand_batch}
-\title{Get long URLs from tiny.cc short URLs}
+\title{Accepts multiple tiny.cc short urls and returns the long urls}
 \usage{
 expand_batch(shortURLs)
 }
+\arguments{
+\item{shortURLs}{vector, the vector of short urls to expand.}
+}
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Get long URLs from tiny.cc short URLs
+Accepts array of tiny.cc short urls and returns the array of pairs of long url and short url.
+}
+\details{
+Maximum number of results requested in each call - 30.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }

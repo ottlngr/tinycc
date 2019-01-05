@@ -2,10 +2,28 @@
 % Please edit documentation in R/expand.R
 \name{expand}
 \alias{expand}
-\title{Get the long URL from a tiny.cc short URL}
+\title{Accepts a tiny.cc short url and returns the long url}
 \usage{
 expand(shortURL)
 }
+\arguments{
+\item{shortURL}{character, the tiny.cc short URL to expand.}
+}
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Get the long URL from a tiny.cc short URL
+tbd.
+}
+\details{
+tbd.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }

@@ -1,12 +1,20 @@
-#' Shorten an URL to a tiny.cc short URL
-#'
-#' @export shorten
+#' @title Accepts a long url and returns a tiny.cc short url
+#' @description Use this function to shorten an arbitrary URL to a tiny.cc short URL. The received short URL will be of the kind \code{http://tiny.cc/[YOUR_HASH]}.
+#' @details \code{\link{auth}} must be used preliminary to store your tiny.cc credentials.
+#' @param longURL character, the URL to be shortened
+#' @param shortURL character, the desired short URL. If NULL, tiny.cc will create a hash. Default: NULL.
+#' @return A list, representing the response from the tiny.cc API.
+#' @author Philipp Ottolinger
+#' @seealso \code{<https://tiny.cc/api-docs>}
 #' @importFrom httr modify_url
 #' @importFrom httr GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
 #' @importFrom utils URLencode
+#' @examples
+#'
+#' @export
 
 shorten <- function(longURL, shortURL = NULL) {
 

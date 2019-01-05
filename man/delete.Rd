@@ -2,10 +2,25 @@
 % Please edit documentation in R/delete.R
 \name{delete}
 \alias{delete}
-\title{Delete a tiny.cc short URL}
+\title{Delete a tiny.cc url}
 \usage{
 delete(shortURL)
 }
+\arguments{
+\item{shortURL}{character, the short URL to be deleted. Can be a full tiny.cc short URL (like \code{http://tiny.cc/foobar}) or just the hash (like \code{foobar}).}
+}
+\value{
+A list, representing the response from the tiny.cc API.
+}
 \description{
-Delete a tiny.cc short URL
+Delete a tiny.cc short URL once created using the same tiny.cc API credentials.
+}
+\examples{
+
+}
+\seealso{
+\code{<https://tiny.cc/api-docs>}
+}
+\author{
+Philipp Ottolinger
 }
