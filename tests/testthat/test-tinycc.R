@@ -17,6 +17,7 @@ s <- tinycc::shorten(longURL, hash)
 
 test_that("longURL is shortened to shortURL", {
   expect_is(s, "list")
+  expect_equal(s$statusCode, "OK")
   expect_equal(s$results$hash, hash)
   expect_true(!is.null(s$results$short_url))
 })
@@ -25,6 +26,7 @@ e <- tinycc::expand(s$results$short_url)
 
 test_that("shortURL can be expanded to longURL", {
   expect_is(e, "list")
+  expect_equal(e$statusCode, "OK")
   expect_equal(e$results$longUrl, longURL)
 })
 
@@ -32,6 +34,7 @@ v <- tinycc::total_visits(s$results$short_url)
 
 test_that("Get total visits for shortURL", {
   expect_is(v, "list")
+  expect_equal(v$statusCode, "OK")
   expect_is(v$results$clicks, "integer")
 })
 
@@ -39,5 +42,13 @@ d <- tinycc::delete(s$results$short_url)
 
 test_that("Delete shortURL", {
   expect_is(d, "list")
+  expect_equal(d$statusCode, "OK")
   expect_equal(d$results$success, "true")
+})
+
+c <- tinycc::get_requests_count()
+
+test_that("Get request count", {
+  expect_is(c, "list")
+  expect_equal(c$statusCode, "OK")
 })
