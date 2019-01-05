@@ -3,7 +3,7 @@
 tinycc
 ======
 
-[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ottlngr/tinycc?branch=master&svg=true)](https://ci.appveyor.com/project/ottlngr/tinycc)
+[![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ottlngr/tinycc?branch=master&svg=true)](https://ci.appveyor.com/project/ottlngr/tinycc) [![Coverage status](https://codecov.io/gh/ottlngr/tinycc/branch/master/graph/badge.svg)](https://codecov.io/github/ottlngr/tinycc?branch=master)
 
 The goal of tinycc is to ... use the `tinycc` API.
 
@@ -46,29 +46,21 @@ library(tinycc)
 
 hash <- paste0(sample(c(LETTERS, letters, 0:9), 6, TRUE), collapse = "")
 hash
-#> [1] "gM8km7"
+#> [1] "vFY5BJ"
 
 # shorten https://ropensci.org/blog/2018/05/10/onboarding-social-weather/
 
 shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/", shortURL = hash)
 #> No encoding supplied: defaulting to UTF-8.
 #> $errorCode
-#> [1] "0"
+#> [1] 205
 #> 
 #> $errorMessage
-#> [1] ""
+#> [1] "You tried to login with an invalid username/password."
 #> 
 #> $results
-#> $results$short_url
-#> [1] "http://tiny.cc/gM8km7"
-#> 
-#> $results$userHash
-#> [1] "gM8km7"
-#> 
-#> $results$hash
-#> [1] "gM8km7"
-#> 
+#> [1] ""
 #> 
 #> $statusCode
-#> [1] "OK"
+#> [1] "ERROR"
 ```
