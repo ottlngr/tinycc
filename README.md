@@ -5,29 +5,33 @@ tinycc
 
 [![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ottlngr/tinycc?branch=master&svg=true)](https://ci.appveyor.com/project/ottlngr/tinycc) [![Coverage status](https://codecov.io/gh/ottlngr/tinycc/branch/master/graph/badge.svg)](https://codecov.io/github/ottlngr/tinycc?branch=master)
 
-The goal of tinycc is to ... use the `tinycc` API.
+Use the tiny.cc API to shorten URLs!
 
-<https://tiny.cc/api-docs>
+API Key
+-------
 
-What is ...
+You will need to use an API Key in order to access the tiny.cc API. You will receive an API Key after signing up at tiny.cc.
+
+Rate Limiting
+-------------
+
+> Development requests are limited to 50 per day, and no more than 5 concurrent requests from a single IP address at a time.
+
+API Methods
 -----------
 
-### ... done
+-   `shorten`
+-   `shorten with custum hash`
+-   `expand`
+-   `expand_batch`
+-   `total_visits`
+-   `total_visits_batch`
+-   `edit` (not implemented in `tinycc`, yet)
+-   `delete`
+-   `get_requests_count`
 
--   `shorten()`
--   `expand()`
--   `expand_batch()`
--   `delete()`
--   `total_visits()`
--   `total_visits_batch()`
--   `get_requests_count()`
-
-### ... to do
-
--   `edit()`
-
-Example
--------
+Examples
+--------
 
 ### Sign up and store credentials
 
@@ -46,21 +50,34 @@ library(tinycc)
 
 hash <- paste0(sample(c(LETTERS, letters, 0:9), 6, TRUE), collapse = "")
 hash
-#> [1] "vFY5BJ"
+#> [1] "FB4tmS"
 
-# shorten https://ropensci.org/blog/2018/05/10/onboarding-social-weather/
+# shorten https://ropensci.org/
 
-shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/", shortURL = hash)
+shorten(longURL = "https://ropensci.org/", shortURL = hash)
 #> No encoding supplied: defaulting to UTF-8.
 #> $errorCode
-#> [1] 205
+#> [1] "0"
 #> 
 #> $errorMessage
-#> [1] "You tried to login with an invalid username/password."
-#> 
-#> $results
 #> [1] ""
 #> 
+#> $results
+#> $results$short_url
+#> [1] "http://tiny.cc/FB4tmS"
+#> 
+#> $results$userHash
+#> [1] "FB4tmS"
+#> 
+#> $results$hash
+#> [1] "FB4tmS"
+#> 
+#> 
 #> $statusCode
-#> [1] "ERROR"
+#> [1] "OK"
 ```
+
+See also
+--------
+
+[https://tiny.cc/api-docs]()

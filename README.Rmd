@@ -16,27 +16,29 @@ knitr::opts_chunk$set(
 
 [![Travis-CI Build Status](https://travis-ci.org/ottlngr/tinycc.svg?branch=master)](https://travis-ci.org/ottlngr/tinycc) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ottlngr/tinycc?branch=master&svg=true)](https://ci.appveyor.com/project/ottlngr/tinycc) [![Coverage status](https://codecov.io/gh/ottlngr/tinycc/branch/master/graph/badge.svg)](https://codecov.io/github/ottlngr/tinycc?branch=master)
 
-The goal of tinycc is to ... use the `tinycc` API.
+Use the tiny.cc API to shorten URLs!
 
-https://tiny.cc/api-docs
+## API Key
 
-## What is ...
+You will need to use an API Key in order to access the tiny.cc API. You will receive an API Key after signing up at tiny.cc.
 
-### ... done
+## Rate Limiting
 
-* `shorten()`
-* `expand()`
-* `expand_batch()`
-* `delete()`
-* `total_visits()`
-* `total_visits_batch()` 
-* `get_requests_count()`
+> Development requests are limited to 50 per day, and no more than 5 concurrent requests from a single IP address at a time.
 
-### ... to do
+## API Methods
 
-* `edit()`
++ `shorten`
++ `shorten with custum hash`
++ `expand`
++ `expand_batch`
++ `total_visits`
++ `total_visits_batch`
++ `edit` (not implemented in `tinycc`, yet)
++ `delete`
++ `get_requests_count`
 
-## Example
+## Examples
 
 ### Sign up and store credentials
 
@@ -56,8 +58,11 @@ library(tinycc)
 hash <- paste0(sample(c(LETTERS, letters, 0:9), 6, TRUE), collapse = "")
 hash
 
-# shorten https://ropensci.org/blog/2018/05/10/onboarding-social-weather/
+# shorten https://ropensci.org/
 
-shorten(longURL = "https://ropensci.org/blog/2018/05/10/onboarding-social-weather/", shortURL = hash)
+shorten(longURL = "https://ropensci.org/", shortURL = hash)
 ```
 
+## See also
+
+[https://tiny.cc/api-docs]()
